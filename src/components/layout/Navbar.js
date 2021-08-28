@@ -20,7 +20,6 @@ const Navbar = () => {
           
               <li className="nav-item active">
               <Link className="navbar-brand" to='/'>Dashboard</Link>
-              {linkToServerSide}
                 </li>
   
         </ul>
