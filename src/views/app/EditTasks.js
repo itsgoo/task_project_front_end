@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import linkToServerSide from './links'
 
 const EditTasks = (props) => {
 
@@ -32,7 +33,7 @@ const EditTasks = (props) => {
 			}
 
 
-			fetch('http://127.0.0.1:8000/api/v1/' + props.editId + '/' , {
+			fetch(linkToServerSide + 'api/v1/' + props.editId + '/' , {
 				method: 'PUT',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({

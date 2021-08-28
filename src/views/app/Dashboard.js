@@ -2,6 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { query } from './Actions';
 import AddTasks from './AddTasks';
 import EditTasks from './EditTasks';
+import linkToServerSide from './links';
 import ListTasks from './ListTasks';
 import Pagination from './Pagination';
 import Sort from './Sort';
@@ -28,7 +29,7 @@ const Dashboard = () => {
 
 
   function fetchTasks(){
-          query('GET', 'http://127.0.0.1:8000/api/v1/')
+          query('GET', linkToServerSide + 'api/v1/')
           .then(response => response.json())
           .then(data => {
             setTasks(data.reverse());
@@ -104,7 +105,7 @@ const Dashboard = () => {
   // get default patameters for changing
   function editItem(itemId){
 
-    query('GET', 'http://127.0.0.1:8000/api/v1/' + itemId + '/')
+    query('GET', linkToServerSide + 'api/v1/' + itemId + '/')
     .then(response => response.json())
     .then(data => {
 

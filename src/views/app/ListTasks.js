@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { query } from './Actions';
+import linkToServerSide from './links';
 
 const ListTasks = ({items, fetchTasks, editItem}) =>{
 	const [isAuth, setIsAuth] = useState(false);
@@ -12,7 +13,7 @@ const ListTasks = ({items, fetchTasks, editItem}) =>{
 
 	function deleteItem(param){
 
-		query('DELETE', 'http://127.0.0.1:8000/api/v1/' + param.id)
+		query('DELETE', linkToServerSide + 'api/v1/' + param.id)
 		.then(response => {
 			fetchTasks()
 		})

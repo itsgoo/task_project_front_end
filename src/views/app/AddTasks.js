@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import linkToServerSide from './links';
 
 
 const AddTasks = ({fetchTasks}) => {
@@ -52,7 +53,7 @@ const AddTasks = ({fetchTasks}) => {
 			text !== ''? setTextDirty(false) : setTextDirty(true)
 		} else{
 			setTaskName(title)
-			fetch('http://127.0.0.1:8000/api/v1/', {
+			fetch(linkToServerSide + 'api/v1/', {
 				method: 'POST',
 				headers: { 'Content-Type': 'application/json' },
 				body: JSON.stringify({

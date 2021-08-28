@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import linkToServerSide from '../../views/app/links';
 
 const Navbar = () => {
   const [isAuth, setIsAuth] = useState(false);
@@ -19,6 +20,7 @@ const Navbar = () => {
           
               <li className="nav-item active">
               <Link className="navbar-brand" to='/'>Dashboard</Link>
+              {linkToServerSide}
                 </li>
   
         </ul>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
+import linkToServerSide from '../app/links';
 
 const Logout = () => {
   const [loading, setLoading] = useState(true);
@@ -14,7 +15,7 @@ const Logout = () => {
   const handleLogout = e => {
     e.preventDefault();
 
-    fetch('http://127.0.0.1:8000/auth/logout/', {
+    fetch(linkToServerSide + 'auth/logout/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
