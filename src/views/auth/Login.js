@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import linkToServerSide from '../app/links';
+import linkToServerSide from '../app/LinkToServerSide';
 import linkToClientSide from '../app/LinkToClientSide';
 
 const Login = () => {

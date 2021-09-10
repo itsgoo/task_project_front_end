@@ -1,5 +1,5 @@
 import React, { useState, useEffect, Fragment } from 'react';
-import linkToServerSide from '../app/links';
+import linkToServerSide from '../app/LinkToServerSide';
 import linkToClientSide from '../app/LinkToClientSide';
 
 const Logout = () => {
