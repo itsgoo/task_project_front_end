@@ -53,7 +53,7 @@ const EditTasks = (props) => {
 				})
 				.catch(error => console.log('error', error))
 		}else{
-			window.location.replace( linkToClientSide + '/login')
+			window.location.replace( linkToClientSide + 'login')
 		}
 	}
 

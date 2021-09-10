@@ -7,7 +7,7 @@ const Logout = () => {
 
   useEffect(() => {
     if (localStorage.getItem('token') == null) {
-      window.location.replace(linkToClientSide + '/login');
+      window.location.replace(linkToClientSide + 'login');
     } else {
       setLoading(false);
     }
