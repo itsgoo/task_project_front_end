@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import linkToServerSide from './links'
+import linkToClientSide from './LinkToClientSide'
+import linkToServerSide from './LinkToServerSide'
 
 const EditTasks = (props) => {
 
@@ -52,7 +53,7 @@ const EditTasks = (props) => {
 				})
 				.catch(error => console.log('error', error))
 		}else{
-			window.location.replace('http://localhost:3000/login')
+			window.location.replace( linkToClientSide + '/login')
 		}
 	}
 

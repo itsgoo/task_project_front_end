@@ -1,6 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { query } from './Actions';
-import linkToServerSide from './links';
+import linkToServerSide from './LinkToServerSide';
 
 const ListTasks = ({items, fetchTasks, editItem}) =>{
 	const [isAuth, setIsAuth] = useState(false);

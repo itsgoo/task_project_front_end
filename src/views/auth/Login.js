@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import linkToServerSide from '../app/links';
+import linkToClientSide from '../app/LinkToClientSide';
 
 const Login = () => {
   const [username, setUsername] = useState('')
@@ -9,7 +10,7 @@ const Login = () => {
 
   useEffect(() => {
     if (localStorage.getItem('token') !== null) {
-      window.location.replace('http://localhost:3000')
+      window.location.replace(linkToClientSide)
     } else {
       setLoading(false)
     }

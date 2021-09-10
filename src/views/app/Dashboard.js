@@ -2,7 +2,7 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { query } from './Actions';
 import AddTasks from './AddTasks';
 import EditTasks from './EditTasks';
-import linkToServerSide from './links';
+import linkToServerSide from './LinkToServerSide';
 import ListTasks from './ListTasks';
 import Pagination from './Pagination';
 import Sort from './Sort';
